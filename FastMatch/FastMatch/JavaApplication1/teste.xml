@@ -1,0 +1,25 @@
+<guj>  
+    <usuario id="0">  
+        <nome>Daniel Destro do Carmo</nome>  
+        <idade>23</idade>  
+        <email>danieldestro@uol.com.br</email>  
+    </usuario>  
+    
+    <usuario id="1">  
+        <nome>Paulo Silveira</nome>  
+        <idade>22</idade>  
+        <email>paulo@paulo.com.br</email>  
+    </usuario>  
+    
+    <usuario id="2">  
+        <nome>Rafael Steil</nome>  
+        <idade>20</idade>  
+        <email>xxx@yyy.com</email>  
+    </usuario>  
+    
+    <usuario id="3">  
+        <nome>Guilherme Silveira</nome>  
+        <idade>20</idade>  
+        <email>aaaaaa@bbbbb.de</email>  
+    </usuario>  
+</guj>  

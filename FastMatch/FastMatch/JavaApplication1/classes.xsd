@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://Loja/Loja" 
+	xmlns="http://Loja/Loja" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="Calcado">
+	</xs:complexType>
+	
+	<xs:complexType name="Tenis">
+		<xs:complexContent>
+			<xs:extension base="Calcado">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Tenis_Adventure">
+		<xs:complexContent>
+			<xs:extension base="Tenis">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Tenis_Esporte">
+		<xs:complexContent>
+			<xs:extension base="Tenis">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Tenis_para_Skate">
+		<xs:complexContent>
+			<xs:extension base="Tenis_Esporte">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Tenis_para_Squash">
+		<xs:complexContent>
+			<xs:extension base="Tenis_Esporte">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Tenis_para_Tennis">
+		<xs:complexContent>
+			<xs:extension base="Tenis_Esporte">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Chuteira">
+		<xs:complexContent>
+			<xs:extension base="Tenis_Esporte">
+				<xs:all>
+					<xs:element name="numero" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="cor" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+				</xs:all>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Tenis_Casual">
+		<xs:complexContent>
+			<xs:extension base="Tenis">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Tenis_Cooper">
+		<xs:complexContent>
+			<xs:extension base="Tenis">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Tenis_Running">
+		<xs:complexContent>
+			<xs:extension base="Tenis">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+   
+   
+   <xs:complexType name="Sapato">
+		<xs:complexContent>
+			<xs:extension base="Calcado">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Sapato_Masculino">
+		<xs:complexContent>
+			<xs:extension base="Sapato">
+				<xs:all>
+					<xs:element name="size" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+				</xs:all>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Oxford">
+		<xs:complexContent>
+			<xs:extension base="Sapato_Masculino">
+				<xs:all>
+					<xs:element name="equivalente" type="Balmoral" minOccurs="0" maxOccurs="1">
+					</xs:element>
+				</xs:all>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Balmoral">
+		<xs:all>
+			<xs:element name="tamanho" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="equivalente" type="Oxford" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Monk">
+		<xs:complexContent>
+			<xs:extension base="Sapato_Masculino">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Loafer">
+		<xs:complexContent>
+			<xs:extension base="Sapato_Masculino">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Brogue">
+		<xs:complexContent>
+			<xs:extension base="Sapato_Masculino">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Driver">
+		<xs:complexContent>
+			<xs:extension base="Sapato_Masculino">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Side_Gore">
+		<xs:complexContent>
+			<xs:extension base="Sapato_Masculino">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Dock_Side">
+		<xs:complexContent>
+			<xs:extension base="Sapato_Masculino">
+				<xs:all>
+					<xs:element name="tamanho" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="color" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="valor" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+               <xs:element name="equivalente" type="Boot_Shoe" minOccurs="0" maxOccurs="1">
+					</xs:element>
+				</xs:all>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+   <xs:complexType name="Boot_Shoe">
+		<xs:all>
+			<xs:element name="numero" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="preco" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="cor" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="equivalente" type="Dock_Side" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+   <xs:complexType name="Cao_Toe">
+		<xs:complexContent>
+			<xs:extension base="Blutcher">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+   <xs:complexType name="Deirby">
+		<xs:complexContent>
+			<xs:extension base="Sapato_Masculino">
+				<xs:all>
+					<xs:element name="equivalente" type="Blutcher" minOccurs="0" maxOccurs="1">
+					</xs:element>
+				</xs:all>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Split_Shoe">
+		<xs:complexContent>
+			<xs:extension base="Deirby">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+   <xs:complexType name="Blutcher">
+		<xs:all>
+			<xs:element name="equivalente" type="Deirby" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+   
+   <xs:complexType name="Tamanco">
+		<xs:complexContent>
+			<xs:extension base="Calcado">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Cloq">
+		<xs:complexContent>
+			<xs:extension base="Tamanco">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Babuche">
+		<xs:complexContent>
+			<xs:extension base="Tamanco">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Sandalia">
+		<xs:complexContent>
+			<xs:extension base="Calcado">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Ana_Bela">
+		<xs:complexContent>
+			<xs:extension base="Sandalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Sandalia_Plataforma">
+		<xs:complexContent>
+			<xs:extension base="Sandalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Rasteirinha">
+		<xs:complexContent>
+			<xs:extension base="Sandalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Sandalia_Salto_Alto">
+		<xs:complexContent>
+			<xs:extension base="Sandalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Sandalia_para_Festa">
+		<xs:complexContent>
+			<xs:extension base="Sandalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Sandalia_Salto_Baixo">
+		<xs:complexContent>
+			<xs:extension base="Sandalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Meia_Pata">
+		<xs:complexContent>
+			<xs:extension base="Sandalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Chinelo">
+		<xs:complexContent>
+			<xs:extension base="Sandalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Papete">
+		<xs:complexContent>
+			<xs:extension base="Sandalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Bota">
+		<xs:complexContent>
+			<xs:extension base="Calcado">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Ankle_Boot">
+		<xs:complexContent>
+			<xs:extension base="Bota">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Bota_Cano_Medio">
+		<xs:complexContent>
+			<xs:extension base="Bota">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Bota_Cano_Longo">
+		<xs:complexContent>
+			<xs:extension base="Bota">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Galocha">
+		<xs:complexContent>
+			<xs:extension base="Bota">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Openboots">
+		<xs:complexContent>
+			<xs:extension base="Bota">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Bota_Cowboy">
+		<xs:complexContent>
+			<xs:extension base="Bota">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Cano_Super_Longo">
+		<xs:complexContent>
+			<xs:extension base="Bota">
+				<xs:all>
+					<xs:element name="equivalente" type="Botas_Maxi" minOccurs="0" maxOccurs="1">
+					</xs:element>
+				</xs:all>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+   
+   <xs:complexType name="Bal_Type">
+		<xs:all>
+			<xs:element name="equivalente" type="Oxford" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+   
+	<xs:complexType name="Botas_Maxi">
+		<xs:all>
+			<xs:element name="equivalente" type="Cano_Super_Longo" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+   
+</xs:schema>

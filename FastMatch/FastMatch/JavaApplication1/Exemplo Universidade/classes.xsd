@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://Classes" 
+	xmlns="http://Classes" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="Estudante_de_Mestrado">
+		<xs:complexContent>
+			<xs:extension base="Estudante">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Estudante_de_Graduacao">
+		<xs:complexContent>
+			<xs:extension base="Estudante">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Funcionario">
+		<xs:all>
+			<xs:element name="equivalente" type="Empregado" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Forasteiro">
+		<xs:complexContent>
+			<xs:extension base="Pessoa">
+				<xs:all>
+					<xs:element name="equivalente" type="Estrangeiro" minOccurs="0" maxOccurs="1">
+					</xs:element>
+				</xs:all>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Homem">
+		<xs:complexContent>
+			<xs:extension base="Pessoa">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Estudante">
+		<xs:complexContent>
+			<xs:extension base="Pessoa">
+				<xs:all>
+					<xs:element name="curso" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+				</xs:all>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Calcado">
+		<xs:all>
+			<xs:element name="preco" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="peso" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Cidadao">
+		<xs:complexContent>
+			<xs:extension base="Pessoa">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Pessoa">
+		<xs:all>
+			<xs:element name="idade" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="kilos" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Empregado">
+		<xs:complexContent>
+			<xs:extension base="Pessoa">
+				<xs:all>
+					<xs:element name="curso" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="equivalente" type="Funcionario" minOccurs="0" maxOccurs="1">
+					</xs:element>
+				</xs:all>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Mulher">
+		<xs:complexContent>
+			<xs:extension base="Pessoa">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Sapato">
+		<xs:complexContent>
+			<xs:extension base="Calcado">
+				<xs:all>
+					<xs:element name="cor" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="tamanho" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+				</xs:all>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Estrangeiro">
+		<xs:all>
+			<xs:element name="equivalente" type="Forasteiro" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Professor_Titular">
+		<xs:complexContent>
+			<xs:extension base="Funcionario">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Estudante_de_Doutorado">
+		<xs:complexContent>
+			<xs:extension base="Estudante">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Professor_Associado">
+		<xs:complexContent>
+			<xs:extension base="Empregado">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+   <xs:complexType name="Professor_Substituto">
+		<xs:complexContent>
+			<xs:extension base="Funcionario">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

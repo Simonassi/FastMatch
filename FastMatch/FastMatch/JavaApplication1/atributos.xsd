@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://Loja/Atributos" 
+	xmlns="http://Loja/Atributos" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="tamanho">
+		<xs:all>
+			<xs:element name="equivalente" type="numero" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="numero">
+		<xs:all>
+			<xs:element name="equivalente" type="size" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="size">
+		<xs:all>
+			<xs:element name="equivalente" type="numeracao" minOccurs="0" maxOccurs="1">
+			</xs:element>
+         <xs:element name="equivalente" type="numero" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="numeracao">
+		<xs:all>
+			<xs:element name="equivalente" type="size" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="preco">
+		<xs:all>
+			<xs:element name="equivalente" type="valor" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="equivalente" type="custo" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="valor">
+		<xs:all>
+			<xs:element name="equivalente" type="price" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="equivalente" type="preco" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="price">
+		<xs:all>
+			<xs:element name="equivalente" type="custo" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="equivalente" type="valor" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="custo">
+		<xs:all>
+			<xs:element name="equivalente" type="preco" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="equivalente" type="price" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="cor">
+		<xs:all>
+			<xs:element name="equivalente" type="color" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="color">
+		<xs:all>
+			<xs:element name="equivalente" type="cor" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="equivalente" type="coloracao" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="coloracao">
+		<xs:all>
+			<xs:element name="equivalente" type="color" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>

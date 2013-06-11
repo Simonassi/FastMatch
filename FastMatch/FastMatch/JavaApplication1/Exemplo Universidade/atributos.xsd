@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://Classes" 
+	xmlns="http://Classes" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="custo">
+		<xs:all>
+			<xs:element name="equivalente" type="preco" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="graduacao">
+		<xs:all>
+			<xs:element name="equivalente" type="curso" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="tamanho">
+		<xs:all>
+			<xs:element name="equivalente" type="comprimento" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="idade">
+		<xs:all>
+			<xs:element name="equivalente" type="anos" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="formacao">
+		<xs:all>
+			<xs:element name="equivalente" type="curso" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="largura">
+		<xs:all>
+			<xs:element name="equivalente" type="comprimento" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="coloracao">
+		<xs:all>
+			<xs:element name="equivalente" type="cor" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="kilos">
+		<xs:all>
+			<xs:element name="equivalente" type="peso" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="curso">
+		<xs:all>
+			<xs:element name="equivalente" type="formacao" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="valor">
+		<xs:all>
+			<xs:element name="equivalente" type="preco" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="peso">
+		<xs:all>
+			<xs:element name="equivalente" type="kilos" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="preco">
+		<xs:all>
+			<xs:element name="equivalente" type="valor" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="comprimento">
+		<xs:all>
+			<xs:element name="equivalente" type="tamanho" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="cor">
+		<xs:all>
+			<xs:element name="equivalente" type="coloracao" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="anos">
+		<xs:all>
+			<xs:element name="equivalente" type="idade" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>
